@@ -2,5 +2,5 @@
 
 angular.module('lollersnapsApp')
   .factory('Snap', function Snap($resource) {
-    return $resource('/api/snaps/:_id', {_id: '@_id', sort:'-timestamp'}, {update: {method: 'PUT'}});
+    return $resource('/api/snaps/:_id', {_id: '@_id'}, {update: {method: 'PUT'}});
   });

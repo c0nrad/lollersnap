@@ -1,10 +1,24 @@
-<!-- <div ng-include="'partials/navbar'"></div>
- -->
+
+
 <div class="row marketing">
   <div ng-repeat="snap in snaps">
-    <img ng-src="{{snap.filepath}}" style="max-width: 300px"> </img>
-    <a href="/#/user/{{snap.fromUser}}"> {{snap.fromUser}} </a>
-
+    <div class="row">
+        <div class="col-md-8">
+            <img ng-src="{{snap.filepath}}" style="max-width: 300px"> </img>
+        </div>
+        <div class="col-md-4">
+            <span class=" lead text-success"> 
+                <span class="glyphicon glyphicon-thumbs-up"> </span> <strong> {{snap.upVotes}}</strong> 
+            </span> 
+            / 
+            <span class="lead text-danger"> 
+                <span class="glyphicon glyphicon-thumbs-down"> </span> <strong> {{snap.downVotes}} </strong>
+            </span>
+            <button class="btn btn-success btn-block" ng-click="upVote(snap)"> Up Vote </button>
+            <button class="btn btn-danger btn-block" ng-click="downVote(snap)"> Down Vote </button>
+            <p> Posted By: <a href="/#/user/{{snap.fromUser}}"> {{snap.fromUser}} </a> </p>
+        </div>
+    </div>
     <hr ng-hide="$last" />
   </div>
 

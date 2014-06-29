@@ -3,11 +3,11 @@
 angular.module('lollersnapsApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
+      'title': 'Top',
+      'link': '/top'
     }, {
-      'title': 'Settings',
-      'link': '/settings'
+      'title': 'New',
+      'link': '/new'
     }];
     
     $scope.logout = function() {

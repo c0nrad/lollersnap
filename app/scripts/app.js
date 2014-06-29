@@ -25,6 +25,14 @@ angular.module('lollersnapsApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+      .when('/new', {
+        templateUrl: 'partials/main',
+        controller: 'MainCtrl'
+      })
+      .when('/top', {
+        templateUrl: 'partials/main',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
