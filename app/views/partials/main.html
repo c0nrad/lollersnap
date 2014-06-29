@@ -1,0 +1,15 @@
+<!-- <div ng-include="'partials/navbar'"></div>
+ -->
+<div class="row marketing">
+  <div ng-repeat="snap in snaps">
+    <img ng-src="{{snap.filepath}}" style="max-width: 300px"> </img>
+    <a href="/#/user/{{snap.fromUser}}"> {{snap.fromUser}} </a>
+
+    <hr ng-hide="$last" />
+  </div>
+
+</div>
+
+<div class="footer">
+  <p> LollerSnap  &copy; 2014</p>
+</div>
