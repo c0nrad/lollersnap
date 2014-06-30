@@ -33,6 +33,10 @@ angular.module('lollersnapsApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/u/:id', {
+        templateUrl: 'partials/user',
+        controller: 'UserCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

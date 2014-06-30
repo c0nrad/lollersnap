@@ -20,3 +20,9 @@ body {
   }
   
 }
+
+.snap {
+    display: inline-block;
+    min-width:350px;
+    padding: 50px;
+}
