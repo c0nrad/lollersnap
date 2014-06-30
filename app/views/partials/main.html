@@ -1,26 +1,17 @@
-<style> 
-    .snap {
-        display: inline-block;
-        min-width:350px;
-        padding: 50px;
-    }
-</style>
-
-<div class="row marketing">
+<div class="row marketing" style="text-align: center">
   <div ng-repeat="snap in snaps" class="snap">
    
-            <img ng-src="{{snap.filepath}}" style="max-width: 350px"> </img>
-       
-            <button class="btn btn-success btn-block" ng-click="upVote(snap)"> 
-                <span class="glyphicon glyphicon-thumbs-up"> </span> <strong> {{snap.upVotes}}</strong>  
-            </button>
-            <button class="btn btn-danger btn-block" ng-click="downVote(snap)">
-                <span class="glyphicon glyphicon-thumbs-down"> </span> <strong> {{snap.downVotes}} </strong> </span> 
-            </button>
-            <p> Posted By: <a href="/#/u/{{snap.fromUser}}"> {{snap.fromUser}} </a> </p>
+    <img ng-src="{{snap.filepath}}" style="max-width: 350px"> </img>
+
+    <button class="btn btn-success btn-block" ng-click="upVote(snap)"> 
+        <span class="glyphicon glyphicon-thumbs-up"> </span> <strong> {{snap.upVotes}}</strong>  
+    </button>
+    <button class="btn btn-danger btn-block" ng-click="downVote(snap)">
+        <span class="glyphicon glyphicon-thumbs-down"> </span> <strong> {{snap.downVotes}} </strong> </span> 
+    </button>
+    <p> Posted By: <a href="/#/u/{{snap.fromUser}}"> {{snap.fromUser}} </a> </p>
      
   </div>
-
 </div>
 
 <div class="footer">
